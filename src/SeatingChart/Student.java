@@ -18,7 +18,7 @@ public class Student {
     // Overrides
     @Override
     public String toString() {
-        return this.getFullName();
+        return this.firstName + " " + this.lastName;
     }
 
     // Setters
@@ -31,10 +31,6 @@ public class Student {
     }
 
     // Getters
-    public String getFullName() {
-        return this.firstName + " " + this.lastName;
-    }
-
     public String getFirstName() {
         return this.firstName;
     }
