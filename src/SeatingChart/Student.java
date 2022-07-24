@@ -1,19 +1,27 @@
 package SeatingChart;
 
 public class Student {
-
     // Instance Variables
-
     public String firstName;
     public String lastName;
+
+    // Constructors
+    public Student() {
+        this.firstName = this.lastName = "";
+    }
 
     public Student(String first, String last) {
         this.firstName = first;
         this.lastName = last;
     }
 
-    // Setters
+    // Overrides
+    @Override
+    public String toString() {
+        return this.getFullName();
+    }
 
+    // Setters
     public void setFirstName(String first) {
         this.firstName = first;
     }
@@ -23,8 +31,7 @@ public class Student {
     }
 
     // Getters
-
-    public String getName() {
+    public String getFullName() {
         return this.firstName + " " + this.lastName;
     }
 
@@ -36,5 +43,8 @@ public class Student {
         return this.lastName;
     }
 
+    public boolean isEmpty() {
+        return this.firstName.isEmpty() && this.lastName.isEmpty();
+    }
 
 }
