@@ -1,6 +1,9 @@
 import SeatingChart.SeatingChart;
 import SeatingChart.Student;
 
+/**
+ * @author Alessandro Pianetta
+ */
 public class Main {
     public static void main(String[] args) {
         SeatingChart chart = new SeatingChart();
@@ -13,7 +16,7 @@ public class Main {
         System.out.println("STUDENT 2: " + chart.students[0][1]);
 
         // Switches students
-        chart.switchStudents("Ciao", "Arrivederci", 0, 0);
+        chart.swapStudents("Ciao", "Arrivederci", 0, 0);
         System.out.println("**** UPDATED VALUES ****");
         System.out.println("STUDENT 1: " + chart.students[0][0]);
         System.out.println("STUDENT 2: " + chart.students[0][1]);

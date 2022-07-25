@@ -1,33 +1,17 @@
 package SeatingChart;
 
+/**
+* @author Alessandro Pianetta
+*/
 public class Student {
     // Instance Variables
-    public String firstName;
-    public String lastName;
-
-    // Constructors
-    public Student() {
-        this.firstName = this.lastName = "";
-    }
-
-    public Student(String first, String last) {
-        this.firstName = first;
-        this.lastName = last;
-    }
+    public String firstName = "";
+    public String lastName = "";
 
     // Overrides
     @Override
     public String toString() {
-        return this.firstName + " " + this.lastName;
-    }
-
-    // Setters
-    public void setFirstName(String first) {
-        this.firstName = first;
-    }
-
-    public void setLastName(String last) {
-        this.lastName = last;
+        return this.getFirstName() + " " + this.getLastName();
     }
 
     // Getters
@@ -39,8 +23,17 @@ public class Student {
         return this.lastName;
     }
 
+    // Checks to see if Student instance has default data or not
     public boolean isEmpty() {
         return this.firstName.isEmpty() && this.lastName.isEmpty();
     }
 
+    // Setters
+    public void setFirstName(String first) {
+        this.firstName = first;
+    }
+
+    public void setLastName(String last) {
+        this.lastName = last;
+    }
 }
